@@ -113,7 +113,8 @@ plt.title("Location based distribution of users")
 plt.show()
 
 # heat map
-heatmap_data = data.pivot_table(index='Product_Browsing_Time', columns='Total_Pages_Viewed', values='User_ID', aggfunc='count', fill_value=0)
+heatmap_data = data.pivot_table(index='Product_Browsing_Time', columns='Total_Pages_Viewed', 
+                                values='User_ID', aggfunc='count', fill_value=0)
 plt.figure(figsize=(10, 8))
 plt.imshow(heatmap_data, cmap='viridis', origin='lower', interpolation='none')
 plt.colorbar(label='Count')
